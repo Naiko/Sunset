@@ -1,5 +1,5 @@
 //
-//  Sun.swift
+//  Light.swift
 //  Sunset
 //
 //  Created by Nico on 13/08/2016.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct Sun {
+struct Light {
 	var color: UIColor
 	var brightness: CGFloat // Between 0 and 1
 }

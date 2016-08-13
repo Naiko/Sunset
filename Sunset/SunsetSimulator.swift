@@ -11,7 +11,7 @@ import UIKit
 
 final class SunsetSimulator {
 
-	private var sun: Sun
+	private var light: Light
 
 	private let refreshInterval: TimeInterval = 1.0/60.0 // 60 times per sec
 
@@ -24,10 +24,10 @@ final class SunsetSimulator {
 	private var timer: Timer?
 	private var startDate: Date?
 
-	var changeHandler: ((sun: Sun) -> ())?
+	var changeHandler: ((light: Light) -> ())?
 
 	init(startColor: UIColor, endColor: UIColor, startBrightness: CGFloat, endBrightness: CGFloat, duration: TimeInterval) {
-		self.sun = Sun(color: .white, brightness: 1.0)
+		self.light = Light(color: .white, brightness: 1.0)
 		self.startColor = startColor
 		self.endColor = endColor
 		self.startBrightness = startBrightness
@@ -55,7 +55,7 @@ final class SunsetSimulator {
 
 		updateColor(progress: progress)
 
-		changeHandler?(sun: self.sun)
+		changeHandler?(light: self.light)
 	}
 
 	private func updateColor(progress: CGFloat) {
@@ -67,7 +67,7 @@ final class SunsetSimulator {
 		let (endRed, endGreen, endBlue) = endColor.getRGB()
 		let currentColorComponents = [(startRed, endRed), (startGreen, endGreen), (startBlue, endBlue)].map({ interpolate($0, $1) })
 
-		sun.color = UIColor(red: currentColorComponents[0], green: currentColorComponents[1], blue: currentColorComponents[2], alpha: 1.0)
-		sun.brightness = interpolate(startBrightness, endBrightness)
+		light.color = UIColor(red: currentColorComponents[0], green: currentColorComponents[1], blue: currentColorComponents[2], alpha: 1.0)
+		light.brightness = interpolate(startBrightness, endBrightness)
 	}
 }

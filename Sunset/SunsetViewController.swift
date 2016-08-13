@@ -23,11 +23,11 @@ final class SunsetViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		sunsetSimulator.changeHandler = { [weak self] sun in
+		sunsetSimulator.changeHandler = { [weak self] light in
 			guard let `self` = self else { return }
 
-			self.view.backgroundColor = sun.color
-			self.screen.brightness = sun.brightness
+			self.view.backgroundColor = light.color
+			self.screen.brightness = light.brightness
 		}
 		saveScreenBrightness()
 		sunsetSimulator.startSunset()
