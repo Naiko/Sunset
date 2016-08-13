@@ -10,7 +10,11 @@ import UIKit
 
 final class SunsetViewController: UIViewController {
 
-	let sunsetSimulator = SunsetSimulator(startColor: .white, endColor: .red, startBrightness: 1.0, endBrightness: 0.0, duration: 20)
+	let sunsetSimulator = SunsetSimulator(startColor: UIColor(temperature: 5000),
+	                                      endColor: UIColor(temperature: 1850),
+	                                      startBrightness: 1.0,
+	                                      endBrightness: 0.0,
+	                                      duration: 20)
 
 	private let screen = UIScreen.main
 

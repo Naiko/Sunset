@@ -17,6 +17,8 @@
 		03B9B6241D5F1C290048F0F6 /* Sun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B9B6231D5F1C290048F0F6 /* Sun.swift */; };
 		03B9B6261D5F1ED20048F0F6 /* SunsetSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B9B6251D5F1ED20048F0F6 /* SunsetSimulator.swift */; };
 		03B9B6291D5F2DE90048F0F6 /* UIColor+GetRGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B9B6281D5F2DE90048F0F6 /* UIColor+GetRGB.swift */; };
+		03B9B62C1D5F52EF0048F0F6 /* UIColor+Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B9B62B1D5F52EF0048F0F6 /* UIColor+Temperature.swift */; };
+		03B9B62E1D5F78ED0048F0F6 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B9B62D1D5F78ED0048F0F6 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		03B9B6231D5F1C290048F0F6 /* Sun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sun.swift; sourceTree = "<group>"; };
 		03B9B6251D5F1ED20048F0F6 /* SunsetSimulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SunsetSimulator.swift; sourceTree = "<group>"; };
 		03B9B6281D5F2DE90048F0F6 /* UIColor+GetRGB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+GetRGB.swift"; sourceTree = "<group>"; };
+		03B9B62B1D5F52EF0048F0F6 /* UIColor+Temperature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Temperature.swift"; sourceTree = "<group>"; };
+		03B9B62D1D5F78ED0048F0F6 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,7 @@
 				03B9B5FB1D5F1B370048F0F6 /* Assets.xcassets */,
 				03B9B5FD1D5F1B370048F0F6 /* LaunchScreen.storyboard */,
 				03B9B6001D5F1B370048F0F6 /* Info.plist */,
+				03B9B62D1D5F78ED0048F0F6 /* Utilities.swift */,
 			);
 			path = Sunset;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				03B9B6281D5F2DE90048F0F6 /* UIColor+GetRGB.swift */,
+				03B9B62B1D5F52EF0048F0F6 /* UIColor+Temperature.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -295,7 +301,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03B9B62C1D5F52EF0048F0F6 /* UIColor+Temperature.swift in Sources */,
 				03B9B5F71D5F1B370048F0F6 /* SunsetViewController.swift in Sources */,
+				03B9B62E1D5F78ED0048F0F6 /* Utilities.swift in Sources */,
 				03B9B6241D5F1C290048F0F6 /* Sun.swift in Sources */,
 				03B9B6261D5F1ED20048F0F6 /* SunsetSimulator.swift in Sources */,
 				03B9B5F51D5F1B370048F0F6 /* AppDelegate.swift in Sources */,
