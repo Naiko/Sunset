@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		03B9B5F51D5F1B370048F0F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B9B5F41D5F1B370048F0F6 /* AppDelegate.swift */; };
-		03B9B5F71D5F1B370048F0F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B9B5F61D5F1B370048F0F6 /* ViewController.swift */; };
+		03B9B5F71D5F1B370048F0F6 /* SunsetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B9B5F61D5F1B370048F0F6 /* SunsetViewController.swift */; };
 		03B9B5FA1D5F1B370048F0F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B9B5F81D5F1B370048F0F6 /* Main.storyboard */; };
 		03B9B5FC1D5F1B370048F0F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03B9B5FB1D5F1B370048F0F6 /* Assets.xcassets */; };
 		03B9B5FF1D5F1B370048F0F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B9B5FD1D5F1B370048F0F6 /* LaunchScreen.storyboard */; };
 		03B9B60A1D5F1B370048F0F6 /* SunsetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B9B6091D5F1B370048F0F6 /* SunsetTests.swift */; };
 		03B9B6151D5F1B370048F0F6 /* SunsetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B9B6141D5F1B370048F0F6 /* SunsetUITests.swift */; };
+		03B9B6241D5F1C290048F0F6 /* Sun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B9B6231D5F1C290048F0F6 /* Sun.swift */; };
+		03B9B6261D5F1ED20048F0F6 /* SunsetSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B9B6251D5F1ED20048F0F6 /* SunsetSimulator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* Begin PBXFileReference section */
 		03B9B5F11D5F1B370048F0F6 /* Sunset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sunset.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03B9B5F41D5F1B370048F0F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		03B9B5F61D5F1B370048F0F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		03B9B5F61D5F1B370048F0F6 /* SunsetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunsetViewController.swift; sourceTree = "<group>"; };
 		03B9B5F91D5F1B370048F0F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		03B9B5FB1D5F1B370048F0F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03B9B5FE1D5F1B370048F0F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		03B9B6101D5F1B370048F0F6 /* SunsetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SunsetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03B9B6141D5F1B370048F0F6 /* SunsetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunsetUITests.swift; sourceTree = "<group>"; };
 		03B9B6161D5F1B370048F0F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03B9B6231D5F1C290048F0F6 /* Sun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sun.swift; sourceTree = "<group>"; };
+		03B9B6251D5F1ED20048F0F6 /* SunsetSimulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SunsetSimulator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +101,9 @@
 		03B9B5F31D5F1B370048F0F6 /* Sunset */ = {
 			isa = PBXGroup;
 			children = (
+				03B9B6221D5F1C130048F0F6 /* Model */,
 				03B9B5F41D5F1B370048F0F6 /* AppDelegate.swift */,
-				03B9B5F61D5F1B370048F0F6 /* ViewController.swift */,
+				03B9B5F61D5F1B370048F0F6 /* SunsetViewController.swift */,
 				03B9B5F81D5F1B370048F0F6 /* Main.storyboard */,
 				03B9B5FB1D5F1B370048F0F6 /* Assets.xcassets */,
 				03B9B5FD1D5F1B370048F0F6 /* LaunchScreen.storyboard */,
@@ -123,6 +128,15 @@
 				03B9B6161D5F1B370048F0F6 /* Info.plist */,
 			);
 			path = SunsetUITests;
+			sourceTree = "<group>";
+		};
+		03B9B6221D5F1C130048F0F6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				03B9B6231D5F1C290048F0F6 /* Sun.swift */,
+				03B9B6251D5F1ED20048F0F6 /* SunsetSimulator.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +276,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03B9B5F71D5F1B370048F0F6 /* ViewController.swift in Sources */,
+				03B9B5F71D5F1B370048F0F6 /* SunsetViewController.swift in Sources */,
+				03B9B6241D5F1C290048F0F6 /* Sun.swift in Sources */,
+				03B9B6261D5F1ED20048F0F6 /* SunsetSimulator.swift in Sources */,
 				03B9B5F51D5F1B370048F0F6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
