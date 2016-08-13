@@ -8,9 +8,9 @@
 
 import UIKit
 
-final class SunViewController: UIViewController {
+final class SunsetViewController: UIViewController {
 
-	let sunsetSimulator = SunsetSimulator()
+	let sunsetSimulator = SunsetSimulator(startColor: .white, endColor: .red, duration: 10)
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -18,7 +18,7 @@ final class SunViewController: UIViewController {
 		sunsetSimulator.changeHandler = { [weak self] sun in
 			self?.view.backgroundColor = sun.color
 		}
-		sunsetSimulator.startSunset(duration: 10)
+		sunsetSimulator.startSunset()
 	}
 	
 }

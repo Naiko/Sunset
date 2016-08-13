@@ -16,6 +16,7 @@
 		03B9B6151D5F1B370048F0F6 /* SunsetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B9B6141D5F1B370048F0F6 /* SunsetUITests.swift */; };
 		03B9B6241D5F1C290048F0F6 /* Sun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B9B6231D5F1C290048F0F6 /* Sun.swift */; };
 		03B9B6261D5F1ED20048F0F6 /* SunsetSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B9B6251D5F1ED20048F0F6 /* SunsetSimulator.swift */; };
+		03B9B6291D5F2DE90048F0F6 /* UIColor+GetRGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B9B6281D5F2DE90048F0F6 /* UIColor+GetRGB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		03B9B6161D5F1B370048F0F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03B9B6231D5F1C290048F0F6 /* Sun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sun.swift; sourceTree = "<group>"; };
 		03B9B6251D5F1ED20048F0F6 /* SunsetSimulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SunsetSimulator.swift; sourceTree = "<group>"; };
+		03B9B6281D5F2DE90048F0F6 /* UIColor+GetRGB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+GetRGB.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		03B9B5F31D5F1B370048F0F6 /* Sunset */ = {
 			isa = PBXGroup;
 			children = (
+				03B9B6271D5F2DD30048F0F6 /* Extensions */,
 				03B9B6221D5F1C130048F0F6 /* Model */,
 				03B9B5F41D5F1B370048F0F6 /* AppDelegate.swift */,
 				03B9B5F61D5F1B370048F0F6 /* SunsetViewController.swift */,
@@ -137,6 +140,14 @@
 				03B9B6251D5F1ED20048F0F6 /* SunsetSimulator.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		03B9B6271D5F2DD30048F0F6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				03B9B6281D5F2DE90048F0F6 /* UIColor+GetRGB.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +291,7 @@
 				03B9B6241D5F1C290048F0F6 /* Sun.swift in Sources */,
 				03B9B6261D5F1ED20048F0F6 /* SunsetSimulator.swift in Sources */,
 				03B9B5F51D5F1B370048F0F6 /* AppDelegate.swift in Sources */,
+				03B9B6291D5F2DE90048F0F6 /* UIColor+GetRGB.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
