@@ -103,11 +103,10 @@
 		03B9B5F31D5F1B370048F0F6 /* Sunset */ = {
 			isa = PBXGroup;
 			children = (
+				03B9B5F41D5F1B370048F0F6 /* AppDelegate.swift */,
 				03B9B6271D5F2DD30048F0F6 /* Extensions */,
 				03B9B6221D5F1C130048F0F6 /* Model */,
-				03B9B5F41D5F1B370048F0F6 /* AppDelegate.swift */,
-				03B9B5F61D5F1B370048F0F6 /* SunsetViewController.swift */,
-				03B9B5F81D5F1B370048F0F6 /* Main.storyboard */,
+				03B9B62A1D5F38E70048F0F6 /* UI */,
 				03B9B5FB1D5F1B370048F0F6 /* Assets.xcassets */,
 				03B9B5FD1D5F1B370048F0F6 /* LaunchScreen.storyboard */,
 				03B9B6001D5F1B370048F0F6 /* Info.plist */,
@@ -148,6 +147,15 @@
 				03B9B6281D5F2DE90048F0F6 /* UIColor+GetRGB.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		03B9B62A1D5F38E70048F0F6 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				03B9B5F61D5F1B370048F0F6 /* SunsetViewController.swift */,
+				03B9B5F81D5F1B370048F0F6 /* Main.storyboard */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
