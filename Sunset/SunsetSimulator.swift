@@ -17,6 +17,8 @@ final class SunsetSimulator {
 
 	private let startColor: UIColor
 	private let endColor: UIColor
+	private let startBrightness: CGFloat
+	private let endBrightness: CGFloat
 	private let duration: TimeInterval
 
 	private var timer: Timer?
@@ -24,10 +26,12 @@ final class SunsetSimulator {
 
 	var changeHandler: ((sun: Sun) -> ())?
 
-	init(startColor: UIColor, endColor: UIColor, duration: TimeInterval) {
-		self.sun = Sun(color: .white, intensity: 1.0)
+	init(startColor: UIColor, endColor: UIColor, startBrightness: CGFloat, endBrightness: CGFloat, duration: TimeInterval) {
+		self.sun = Sun(color: .white, brightness: 1.0)
 		self.startColor = startColor
 		self.endColor = endColor
+		self.startBrightness = startBrightness
+		self.endBrightness = endBrightness
 		self.duration = duration
 	}
 
@@ -49,15 +53,21 @@ final class SunsetSimulator {
 
 		let progress = CGFloat(elapsedTime/duration)
 
-		let (startRed, startGreen, startBlue) = startColor.getRGB()
-		let (endRed, endGreen, endBlue) = endColor.getRGB()
+		updateColor(progress: progress)
 
-		let currentColorComponents = [(startRed, endRed), (startGreen, endGreen), (startBlue, endBlue)].map { (start, end) in
+		changeHandler?(sun: self.sun)
+	}
+
+	private func updateColor(progress: CGFloat) {
+		let interpolate = { (start: CGFloat, end: CGFloat) in
 			return start + progress * (end - start)
 		}
 
-		sun.color = UIColor(red: currentColorComponents[0], green: currentColorComponents[1], blue: currentColorComponents[2], alpha: 1.0)
+		let (startRed, startGreen, startBlue) = startColor.getRGB()
+		let (endRed, endGreen, endBlue) = endColor.getRGB()
+		let currentColorComponents = [(startRed, endRed), (startGreen, endGreen), (startBlue, endBlue)].map({ interpolate($0, $1) })
 
-		changeHandler?(sun: self.sun)
+		sun.color = UIColor(red: currentColorComponents[0], green: currentColorComponents[1], blue: currentColorComponents[2], alpha: 1.0)
+		sun.brightness = interpolate(startBrightness, endBrightness)
 	}
 }

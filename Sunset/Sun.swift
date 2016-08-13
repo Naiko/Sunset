@@ -11,5 +11,5 @@ import UIKit
 
 struct Sun {
 	var color: UIColor
-	var intensity: Double // Between 0 and 1
+	var brightness: CGFloat // Between 0 and 1
 }
