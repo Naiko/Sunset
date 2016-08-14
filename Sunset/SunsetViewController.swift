@@ -14,12 +14,13 @@ final class SunsetViewController: UIViewController {
 	                                      endColor: UIColor(temperature: 1850),
 	                                      startBrightness: 1.0,
 	                                      endBrightness: 0.0,
-	                                      duration: 20)
+	                                      duration: 15 * 60)
 
 	private let screen = UIScreen.main
 
 	private var savedScreenBrightness: CGFloat?
 
+	// MARK: - View Lifecycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
@@ -37,13 +38,18 @@ final class SunsetViewController: UIViewController {
 		NotificationCenter.default.addObserver(self, selector: #selector(resetScreenBrightness), name: Notification.Name.UIApplicationWillResignActive, object: nil)
 	}
 
-	override func viewDidDisappear(_ animated: Bool) {
-		super.viewDidDisappear(animated)
+	override func viewWillDisappear(_ animated: Bool) {
+		super.viewWillDisappear(animated)
 
 		NotificationCenter.default.removeObserver(self)
 		resetScreenBrightness()
 	}
 
+	@IBAction func closeButtonTapped() {
+		dismiss(animated: true, completion: nil)
+	}
+
+	// MARK: - Screen brightness
 	private func saveScreenBrightness() {
 		savedScreenBrightness = screen.brightness
 	}
